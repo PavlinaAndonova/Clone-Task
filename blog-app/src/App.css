@@ -1,0 +1,356 @@
+
+/* General styling */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Main background, text, colour and font */
+body {
+  margin: 0;
+  background-color: #e9e9e9;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  color: #111;
+  line-height: 1.5;
+}
+
+/* Set the application width and minimum height */
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Font for all headings */
+h1, h2, h3 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-weight: normal;
+  color: #111;
+}
+
+/* Header and navigation */
+
+/* Centre the header and set width */
+.blog-header {
+  width: 100%;
+  max-width: 1100px;
+  padding: 50px 50px 0;
+  margin: 0 auto;
+}
+
+/* Blog logo */
+.blog-logo {
+  display: block;
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  margin: 0 auto 50px;
+}
+
+/* Organise navigation links using Flexbox */
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* Navigation links */
+.main-navigation a {
+  font-size: 16px;
+  color: #111;
+  text-decoration: none;
+}
+
+/* Underline links when hovered */
+.main-navigation a:hover,
+.footer-navigation a:hover {
+  text-decoration: underline;
+}
+
+
+/* Main content */
+
+/* White background and centred content */
+.main-content {
+  font-family: josefin sans, sans-serif;
+  background-color: white;
+  border: 1px solid #aaa;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Article */
+
+/* Add spacing around the article */
+.article-content {
+  padding: 50px;
+}
+
+/* Align introduction text to the left */
+.article-introduction {
+  text-align: left;
+}
+
+/* Main article heading */
+.article-introduction h1 {
+  font-size: 96px;
+  line-height: 1;
+  margin: 0;
+}
+
+/* Article subtitle */
+.article-introduction h2 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 0 0 25px;
+}
+
+/* Introduction paragraph */
+.article-introduction p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0 0 30px;
+}
+
+/* Three-column article */
+
+/* Divide article text into three balanced columns */
+.article-columns {
+  column-count: 3;
+  column-gap: 25px;
+  column-fill: balance;
+  text-align: left;
+}
+
+/* Headings inside the article columns */
+.article-columns h3 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 0 0 15px;
+  break-after: avoid;
+}
+
+/* Article paragraphs */
+.article-columns p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+/* Album gallery */
+
+/* Arrange five album covers using CSS Grid */
+.album-gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  aspect-ratio: 2 / 1;
+}
+
+/* Album image containers */
+.album-placeholder {
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Make images fill their containers */
+.album-placeholder img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Featured album spans two rows */
+.featured-album {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+/* Four smaller albums */
+
+/* Top row, second column */
+.album-one {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Top row, third column */
+.album-two {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* Bottom row, second column */
+.album-three {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Bottom row, third column */
+.album-four {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+
+/* Author section */
+
+/* Arrange author description, photo and icons using Grid */
+.author-section {
+  display: grid;
+  background-color: white;
+  grid-template-columns: minmax(0, 1fr) 200px 50px;
+  align-items: center;
+  gap: 25px;
+  padding: 50px;
+}
+
+/* Author description */
+.author-description {
+  text-align: left;
+}
+
+/* Author heading */
+.author-description h2 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+/* Author paragraph */
+.author-description p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding-left: 100px;
+}
+
+/* Circular author profile picture */
+.author-photo {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #aaa;
+}
+
+
+/* Social media icons */
+
+/* Arrange social icons using Flexbox */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Social icon size */
+.social-icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Display author icons vertically */
+.author-socials {
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Comments section */
+
+/* Comments background and spacing */
+.comments-section {
+  padding: 50px;
+  background-color: #e9e9e9;
+  text-align: left;
+}
+
+/* Comments heading */
+.comments-section h2 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 0 0 30px;
+}
+
+/* Arrange comments vertically using Flexbox */
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Limit the width of each comment */
+.comment {
+  max-width: 500px;
+}
+
+/* Comment usernames */
+.comment h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+
+/* Comment text */
+.comment p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Footer */
+
+/* Footer background, spacing and text */
+.site-footer {
+  width: 100%;
+  min-height: 250px;
+  padding: 50px;
+  background-color: #14181d;
+  color: white;
+  text-align: center;
+}
+
+/* Arrange footer navigation links using Flexbox */
+.footer-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 35px;
+}
+
+/* Footer navigation links */
+.footer-navigation a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* Copyright text */
+.copyright {
+  font-size: 16px;
+  margin: 0 0 30px;
+}
+
+/* Display footer social icons horizontally */
+.footer-socials {
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Make the Twitter/X icon white on the dark footer */
+.footer-socials img[src*="twitter-icon"] {
+  filter: brightness(0) invert(1);
+}
