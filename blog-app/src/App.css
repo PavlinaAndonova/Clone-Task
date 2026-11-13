@@ -356,6 +356,11 @@ h1, h2, h3 {
 }
 
 /* Make the Twitter/X icon white on the dark footer */
+/* I have used AI tool to make the icon visible, 
+because the icon was white by default and was not visible for Autor socials.
+I change the icon to black, using AI instructions and the following code
+to make icon white in the footer */
+
 .footer-socials img[src*="twitter-icon"] {
   filter: brightness(0) invert(1);
 }
